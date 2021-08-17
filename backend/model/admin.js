@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const adminschema = new Schema({
     jobid:String,
     jobtitle:String,
-    jobposteddate:String,
+    jobposteddate: { type: Date, default: Date.now },
     role:String,
     responsibility:String,
     companyname:String,
